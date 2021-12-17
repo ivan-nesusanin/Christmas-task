@@ -1,0 +1,58 @@
+.wrapper {
+  height: 100%;
+  width: 100vw;
+  background-image: url('../../assets/home/main-bg.jpg');
+  background-size: cover;
+}
+
+.ball-1 {
+  position: absolute;
+  top: 9%;
+  left: calc(50% - 27vw);
+  width: 17vw;
+}
+
+.ball-2 {
+  position: absolute;
+  top: 9%;
+  left: calc(50% + 10vw);
+  width: 13vw;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 40%;
+  left: calc(50% - 250px);
+  width: 500px;
+  height: 150px;
+  border: solid 1px #92c2c2;
+  border-radius: 20px;
+  backdrop-filter: blur(5px);
+
+  h1 {
+    font-size: 2em;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+  }
+}
+
+.btn {
+  position: absolute;
+  top: 75%;
+  left: calc(50% - 50px);
+  padding: 10px 30px;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  border-radius: 20px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #92c2c2;
+    transition: 0.7s;
+  }
+}

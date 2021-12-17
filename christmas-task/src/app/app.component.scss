@@ -1,0 +1,36 @@
+.header {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 16px 20px;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  width: 350px;
+}
+
+.link-page {
+  font-weight: bolder;
+  color: #fff;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  &:hover {
+    color: #92c2c2;
+    transition: 0.7s;
+  }
+}
+
+.active {
+  color: #92c2c2;
+}
+
+.main {
+  display: flex;
+  margin: 0 auto;
+  min-height: calc(100vh - 115px);
+}

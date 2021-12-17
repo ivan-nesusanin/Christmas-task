@@ -1,0 +1,14 @@
+<header class="header">
+  <nav class="navigation">
+    <a class="link-page" routerLinkActive="active" [routerLink]="['/']" [routerLinkActiveOptions]="{exact: true}"> Стартовая </a>
+    <a class="link-page" routerLinkActive="active" [routerLink]="['/toys']">Игрушки</a>
+    <a class="link-page" routerLinkActive="active" [routerLink]="['/tree']">Ёлка</a>
+  </nav>
+  <!-- <div>
+    <input type="search">
+    <div></div>
+  </div> -->
+</header>
+<main class="main">
+  <router-outlet></router-outlet>
+</main>
