@@ -1,0 +1,10 @@
+<div class="search-container">
+  <h2>Игрушки</h2>
+  <input class="search" type="search">
+  <button class="btn-search"><img src="../../../assets/toys/search.svg" alt="btn" height="30" width="30"></button>
+</div>
+<div class="wrapper">
+  <app-card
+  *ngFor="let c of cards"
+  [cards] = "c"></app-card>
+</div>
