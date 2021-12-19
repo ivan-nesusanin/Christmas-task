@@ -10,11 +10,20 @@ import { ToysComponent } from './toys/toys.component';
 import { HomeComponent } from './home/home.component';
 import { TreeComponent } from './tree/tree.component';
 import { CardComponent } from './toys/toy/card/card.component';
+import { FilterService } from './services/filter.service';
 
 @NgModule({
-  declarations: [AppComponent, SettingsComponent, ToyComponent, ToysComponent, HomeComponent, TreeComponent, CardComponent],
+  declarations: [
+    AppComponent,
+    SettingsComponent,
+    ToyComponent,
+    ToysComponent,
+    HomeComponent,
+    TreeComponent,
+    CardComponent,
+  ],
   imports: [BrowserModule, FormsModule, AppRoutingModule],
-  providers: [],
+  providers: [FilterService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

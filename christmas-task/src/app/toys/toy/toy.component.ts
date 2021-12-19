@@ -1,26 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Card } from 'src/app/modules/interfaces/card-interface';
 import { data } from '../../../assets/data';
-
-export interface Card {
-  num: string;
-  name: string;
-  count: string;
-  year: string;
-  shape: string;
-  color: string;
-  size: string;
-  favorite: boolean;
-}
 
 @Component({
   selector: 'app-toy',
   templateUrl: './toy.component.html',
   styleUrls: ['./toy.component.scss'],
 })
-export class ToyComponent implements OnInit {
-  constructor() {}
 
+export class ToyComponent {
   cards: Card[] = data;
 
-  ngOnInit(): void {}
+  constructor() {}
 }

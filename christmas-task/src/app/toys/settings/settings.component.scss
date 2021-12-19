@@ -1,0 +1,74 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 50px;
+  padding: 10px 20px;
+  color: #fff;
+
+  h2 {
+    font-size: 1.2em;
+    font-weight: normal;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+  }
+}
+
+.container-select {
+  display: flex;
+  gap: 10px 30px;
+  flex-wrap: wrap;
+}
+
+.select {
+  max-width: 225px;
+  height: 30px;
+  background-color: #92c2c2;
+  border: solid 1px #fff;
+  border-radius: 10px;
+}
+
+p {
+  text-transform: uppercase;
+}
+
+.container-shape,
+.container-color {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+button {
+  width: 30px;
+  height: 30px;
+  background: inherit;
+  border: 0;
+  cursor: pointer;
+}
+
+.white {
+  background-color: #fff;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: green;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.active {
+  background-image: url("../../../assets/toys/checkmark.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}

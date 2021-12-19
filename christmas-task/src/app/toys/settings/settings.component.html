@@ -1,0 +1,29 @@
+<div class="wrapper">
+  <h2>Фильтры</h2>
+  <div class="container-select">
+    <p>Сортировать:</p>
+    <select class="select" name="select">
+      <option value="value1">По названию от "А" до "Я"</option>
+      <option value="value2">По названию от "Я" до "А"</option>
+      <option value="value3">По количеству (по возрастанию)</option>
+      <option value="value4">По количеству (по убыванию)</option>
+    </select>
+  </div>
+  <div class="container-shape">
+    <p>Форма:</p>
+    <button><img src="../../../assets/toys/bell.svg" alt="bell" width="30" height="30"></button>
+    <button><img src="../../../assets/toys/ball.svg" alt="ball" width="30" height="30"></button>
+    <button><img src="../../../assets/toys/pine.svg" alt="pine" width="30" height="30"></button>
+    <button><img src="../../../assets/toys/snowflake.svg" alt="snowflake" width="30" height="30"></button>
+    <button><img src="../../../assets/toys/bird_toy.svg" alt="bird" width="30" height="30"></button>
+  </div>
+  <div class="container-color">
+    <p>Цвет:</p>
+    <button class="white" (click)="filterWhite()"></button>
+    <button class="blue"></button>
+    <button class="red" (click)="filterRed()"></button>
+    <button class="green"></button>
+    <button class="yellow"></button>
+  </div>
+</div>
+
