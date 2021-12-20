@@ -3,7 +3,8 @@
   <div class="container-select">
     <p>Сортировать:</p>
     <select class="select" name="select">
-      <option value="value1">По названию от "А" до "Я"</option>
+      <option selected="false" disabled="disabled">Отсортировать...</option>
+      <option value="value1" (change)="sort(true)">По названию от "А" до "Я"</option>
       <option value="value2">По названию от "Я" до "А"</option>
       <option value="value3">По количеству (по возрастанию)</option>
       <option value="value4">По количеству (по убыванию)</option>
@@ -19,11 +20,17 @@
   </div>
   <div class="container-color">
     <p>Цвет:</p>
-    <button class="white" (click)="filterWhite()"></button>
-    <button class="blue"></button>
-    <button class="red" (click)="filterRed()"></button>
-    <button class="green"></button>
-    <button class="yellow"></button>
+    <button class="white" (click)="filterWhite(true)" (click)="clickedWhite=!clickedWhite" [ngClass]="{active: clickedWhite}"></button>
+    <button class="blue" (click)="filterBlue(true)" (click)="clickedBlue=!clickedBlue" [ngClass]="{active: clickedBlue}"></button>
+    <button class="red" (click)="filterRed(true)" (click)="clickedRed=!clickedRed" [ngClass]="{active: clickedRed}"></button>
+    <button class="green" (click)="filterGreen(true)" (click)="clickedGreen=!clickedGreen" [ngClass]="{active: clickedGreen}"></button>
+    <button class="yellow" (click)="filterYellow(true)" (click)="clickedYellow=!clickedYellow" [ngClass]="{active: clickedYellow}"></button>
+  </div>
+  <div class="container-size">
+    <p>Размер:</p>
+    <button class="big"><img src="../../../assets/toys/ball.svg" alt="ball" width="40" height="40"></button>
+    <button class="middle"><img src="../../../assets/toys/ball.svg" alt="ball" width="30" height="30"></button>
+    <button class="small"><img src="../../../assets/toys/ball.svg" alt="ball" width="25" height="25"></button>
   </div>
 </div>
 

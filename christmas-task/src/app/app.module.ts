@@ -10,7 +10,7 @@ import { ToysComponent } from './toys/toys.component';
 import { HomeComponent } from './home/home.component';
 import { TreeComponent } from './tree/tree.component';
 import { CardComponent } from './toys/toy/card/card.component';
-import { FilterService } from './services/filter.service';
+// import { FilterService } from './services/filter.service';
 
 @NgModule({
   declarations: [
@@ -23,7 +23,7 @@ import { FilterService } from './services/filter.service';
     CardComponent,
   ],
   imports: [BrowserModule, FormsModule, AppRoutingModule],
-  providers: [FilterService],
+  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

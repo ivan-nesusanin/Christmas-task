@@ -33,7 +33,9 @@ p {
 }
 
 .container-shape,
-.container-color {
+.container-color,
+.container-size,
+.big {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -72,3 +74,4 @@ button {
   background-repeat: no-repeat;
   background-size: cover;
 }
+

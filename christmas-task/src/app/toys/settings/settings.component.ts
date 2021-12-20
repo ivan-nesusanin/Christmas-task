@@ -1,5 +1,4 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { Card } from 'src/app/modules/interfaces/card-interface';
 import { data } from 'src/assets/data';
 
 @Component({
@@ -8,17 +7,53 @@ import { data } from 'src/assets/data';
   styleUrls: ['./settings.component.scss'],
 })
 export class SettingsComponent {
-  @Output() eFilter: EventEmitter<Card[]> = new EventEmitter<Card[]>();
+  @Output() eFilterWhite = new EventEmitter<boolean>();
 
-  constructor() {}
+  @Output() eFilterBlue = new EventEmitter<boolean>();
 
-  filterWhite(): void {
-    const filterCards = data.filter((item) => item.color === 'белый');
-    this.eFilter.emit(filterCards);
-    // console.log(filterCards);
+  @Output() eFilterRed = new EventEmitter<boolean>();
+
+  @Output() eFilterGreen = new EventEmitter<boolean>();
+
+  @Output() eFilterYellow = new EventEmitter<boolean>();
+
+  @Output() eFilterSort = new EventEmitter<boolean>();
+
+  // constructor() {}
+
+  clickedWhite = false;
+
+  clickedBlue = false;
+
+  clickedRed = false;
+
+  clickedGreen = false;
+
+  clickedYellow = false;
+
+  filterWhite(clickWhite: boolean): void {
+    this.eFilterWhite.emit(clickWhite);
   }
 
-  filterRed(): void {
-    console.log(data.filter((item) => item.color === 'красный'));
+  filterBlue(clickBlue: boolean): void {
+    this.eFilterBlue.emit(clickBlue);
+  }
+
+  filterRed(clickRed: boolean): void {
+    this.eFilterRed.emit(clickRed);
+  }
+
+  filterGreen(clickGreen: boolean): void {
+    this.eFilterGreen.emit(clickGreen);
+  }
+
+  filterYellow(clickYellow: boolean): void {
+    this.eFilterYellow.emit(clickYellow);
+  }
+
+  sort(changeSort: boolean): void {
+    const x = data;
+    console.log(x)
+    this.eFilterSort.emit(changeSort);
   }
 }

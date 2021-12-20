@@ -10,7 +10,7 @@ export class CardComponent implements OnInit {
   @Input()
   cards!: Card;
 
-  constructor() {}
+  // constructor() {}
 
   ngOnInit(): void {}
 }
