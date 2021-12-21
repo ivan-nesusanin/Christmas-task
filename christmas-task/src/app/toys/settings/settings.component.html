@@ -2,21 +2,33 @@
   <h2>Фильтры</h2>
   <div class="container-select">
     <p>Сортировать:</p>
-    <select class="select" name="select" (change)="sort(true)">
-      <option value="value0" selected="false" disabled="disabled">Отсортировать...</option>
-      <option value="value1">По названию от "А" до "Я"</option>
-      <option value="value2">По названию от "Я" до "А"</option>
-      <option value="value3">По количеству (по возрастанию)</option>
-      <option value="value4">По количеству (по убыванию)</option>
-    </select>
+    <form [formGroup]="form">
+      <select class="select" name="select" formControlName="select" (change)="sort(true)">
+        <option value="value0" selected="false" disabled="disabled">Отсортировать...</option>
+        <option value="value1">По названию от "А" до "Я"</option>
+        <option value="value2">По названию от "Я" до "А"</option>
+        <option value="value3">По количеству (по возрастанию)</option>
+        <option value="value4">По количеству (по убыванию)</option>
+      </select>
+    </form>
   </div>
   <div class="container-shape">
     <p>Форма:</p>
-    <button><img src="../../../assets/toys/bell.svg" alt="bell" width="30" height="30"></button>
-    <button><img src="../../../assets/toys/ball.svg" alt="ball" width="30" height="30"></button>
-    <button><img src="../../../assets/toys/pine.svg" alt="pine" width="30" height="30"></button>
-    <button><img src="../../../assets/toys/snowflake.svg" alt="snowflake" width="30" height="30"></button>
-    <button><img src="../../../assets/toys/bird_toy.svg" alt="bird" width="30" height="30"></button>
+    <button (click)="checkBell(true)">
+      <img src="../../../assets/toys/bell.svg" alt="bell" width="30" height="30">
+    </button>
+    <button (click)="checkBall(true)">
+      <img src="../../../assets/toys/ball.svg" alt="ball" width="30" height="30">
+    </button>
+    <button (click)="checkPine(true)">
+      <img src="../../../assets/toys/pine.svg" alt="pine" width="30" height="30">
+    </button>
+    <button (click)="checkSnowflake(true)">
+      <img src="../../../assets/toys/snowflake.svg" alt="snowflake" width="30" height="30">
+    </button>
+    <button (click)="checkBird(true)">
+      <img src="../../../assets/toys/bird_toy.svg" alt="bird" width="30" height="30">
+    </button>
   </div>
   <div class="container-color">
     <p>Цвет:</p>
@@ -28,12 +40,21 @@
   </div>
   <div class="container-size">
     <p>Размер:</p>
-    <img src="../../../assets/toys/ball.svg" alt="ball" width="40" height="40">
-      <input class="checkbox" type="checkbox">
+    <button class="big" (click)="checkBig(true)">
+      <img src="../../../assets/toys/ball.svg" alt="ball" width="40" height="40">
+    </button>
+    <button class="middle" (click)="checkMiddle(true)">
+      <img src="../../../assets/toys/ball.svg" alt="ball" width="30" height="30">
+    </button>
+    <button class="small" (click)="checkSmall(true)">
+      <img src="../../../assets/toys/ball.svg" alt="ball" width="25" height="25">
+    </button>
+    <!-- <img src="../../../assets/toys/ball.svg" alt="ball" width="40" height="40">
+      <input class="checkbox" type="checkbox" (click)="checkBig(true)">
     <img src="../../../assets/toys/ball.svg" alt="ball" width="30" height="30">
-      <input class="checkbox" type="checkbox">
+      <input class="checkbox" type="checkbox" (click)="checkMiddle(true)">
     <img src="../../../assets/toys/ball.svg" alt="ball" width="23" height="23">
-      <input class="checkbox" type="checkbox">
+      <input class="checkbox" type="checkbox" (click)="checkSmall(true)"> -->
   </div>
   <div class="container-favorite">
     <p>Только любимые:</p>
@@ -55,6 +76,6 @@
       <span>2020</span>
     </div>
   </div>
-  <button class="reset" (click)="resetFilters(true)" >Сбросить фильтры</button>
+  <button class="reset" (click)="resetFilters(true)">Сбросить фильтры</button>
 </div>
 
