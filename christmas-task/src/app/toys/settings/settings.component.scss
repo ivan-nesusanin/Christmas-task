@@ -1,7 +1,7 @@
 .wrapper {
   display: flex;
   flex-direction: column;
-  row-gap: 50px;
+  row-gap: 40px;
   padding: 10px 20px;
   color: #fff;
 
@@ -49,6 +49,10 @@ button {
   cursor: pointer;
 }
 
+.container-color button {
+  outline: solid 2px #92c2c2;
+}
+
 .white {
   background-color: #fff;
 }
@@ -75,3 +79,45 @@ button {
   background-size: cover;
 }
 
+.checkbox {
+  outline: solid 3px #92c2c2;
+  cursor: pointer;
+}
+
+.container-favorite {
+  display: flex;
+  align-items: center;
+
+  input {
+    margin-left: 30px;
+  }
+}
+
+.container-amount,
+.container-year {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+
+.under-range {
+  display: flex;
+  justify-content: space-between;
+}
+
+.reset {
+  width: 70%;
+  height: 40px;
+  font-size: 1em;
+  font-weight: 600;
+  background-color: #92c2c2;
+  text-transform: uppercase;
+  border: solid 1px #fff;
+  border-radius: 20px;
+  cursor: pointer;
+
+  &:hover {
+    width: 100%;;
+    transition: 0.7s;
+  }
+}
