@@ -1,12 +1,18 @@
-import { Component, EventEmitter, Output } from '@angular/core';
-import { data } from 'src/assets/data';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-settings',
   templateUrl: './settings.component.html',
   styleUrls: ['./settings.component.scss'],
 })
-export class SettingsComponent {
+export class SettingsComponent implements OnInit {
+  // form: FormGroup;
+
+  ngOnInit(): void {
+  //   this.form = new FormGroup({});
+  }
+
   @Output() eFilterWhite = new EventEmitter<boolean>();
 
   @Output() eFilterBlue = new EventEmitter<boolean>();
@@ -54,8 +60,7 @@ export class SettingsComponent {
   }
 
   sort(changeSort: boolean): void {
-    const x = data;
-    console.log(x)
+
     this.eFilterSort.emit(changeSort);
   }
 

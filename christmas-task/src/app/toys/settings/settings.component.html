@@ -2,9 +2,9 @@
   <h2>Фильтры</h2>
   <div class="container-select">
     <p>Сортировать:</p>
-    <select class="select" name="select">
-      <option selected="false" disabled="disabled">Отсортировать...</option>
-      <option value="value1" (change)="sort(true)">По названию от "А" до "Я"</option>
+    <select class="select" name="select" (change)="sort(true)">
+      <option value="value0" selected="false" disabled="disabled">Отсортировать...</option>
+      <option value="value1">По названию от "А" до "Я"</option>
       <option value="value2">По названию от "Я" до "А"</option>
       <option value="value3">По количеству (по возрастанию)</option>
       <option value="value4">По количеству (по убыванию)</option>
@@ -55,6 +55,6 @@
       <span>2020</span>
     </div>
   </div>
-  <button class="reset" (click)="resetFilters(true)">Сбросить фильтры</button>
+  <button class="reset" (click)="resetFilters(true)" >Сбросить фильтры</button>
 </div>
 

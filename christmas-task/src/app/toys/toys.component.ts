@@ -10,10 +10,16 @@ import { Card } from '../modules/interfaces/card-interface';
 export class ToysComponent {
   public filterCards: Card[] = data;
 
-  sort(changeSort: boolean) {
+  sort(changeSort: boolean): void {
     if (changeSort) {
-      this.filterCards = data.sort();
-      console.log(this.filterCards)
+      const arr = data.slice(0);
+      this.filterCards = arr.sort((a, b) => {
+        if (b.name < a.name) {
+          return 1;
+        } else {
+          return -1;
+        }
+      });
     }
   }
 
@@ -23,7 +29,6 @@ export class ToysComponent {
       const white = data.filter((item) => item.color === 'белый');
       white.forEach((item) => this.filterCards.push(item));
     }
-    // if (clickedWhite) this.filterCards = data;
   }
 
   filterBlue(clickBlue: boolean): void {
