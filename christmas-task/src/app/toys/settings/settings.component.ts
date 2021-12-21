@@ -19,6 +19,8 @@ export class SettingsComponent {
 
   @Output() eFilterSort = new EventEmitter<boolean>();
 
+  @Output() eFilterReset = new EventEmitter<boolean>();
+
   // constructor() {}
 
   clickedWhite = false;
@@ -31,8 +33,8 @@ export class SettingsComponent {
 
   clickedYellow = false;
 
-  filterWhite(clickWhite: boolean): void {
-    this.eFilterWhite.emit(clickWhite);
+  filterWhite(clickedWhite: boolean): void {
+    this.eFilterWhite.emit(clickedWhite);
   }
 
   filterBlue(clickBlue: boolean): void {
@@ -55,5 +57,9 @@ export class SettingsComponent {
     const x = data;
     console.log(x)
     this.eFilterSort.emit(changeSort);
+  }
+
+  resetFilters(reset: boolean) {
+    this.eFilterReset.emit(reset);
   }
 }

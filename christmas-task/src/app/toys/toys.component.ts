@@ -17,12 +17,13 @@ export class ToysComponent {
     }
   }
 
-  filterWhite(clickWhite: boolean): void {
+  filterWhite(clickedWhite: boolean): void {
     if (this.filterCards.length >= 60) this.filterCards = [];
-    if (clickWhite) {
+    if (clickedWhite) {
       const white = data.filter((item) => item.color === 'белый');
       white.forEach((item) => this.filterCards.push(item));
     }
+    // if (clickedWhite) this.filterCards = data;
   }
 
   filterBlue(clickBlue: boolean): void {
@@ -55,5 +56,9 @@ export class ToysComponent {
       const yellow = data.filter((item) => item.color === 'желтый');
       yellow.forEach((item) => this.filterCards.push(item));
     }
+  }
+
+  resetFilters(reset: boolean) {
+    if (reset) this.filterCards = data;
   }
 }
