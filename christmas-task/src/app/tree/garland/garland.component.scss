@@ -1,0 +1,60 @@
+@import '../../../scss/components/h2';
+
+.garland-container {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 30px;
+}
+
+.colors {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 10px;
+  align-items: center;
+
+  p {
+    color: #fff;
+  }
+
+  input {
+    // margin: 0 20px 0 3px;
+    outline: solid 3px #92c2c2;
+    cursor: pointer;
+  }
+
+  button {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+.rainbow {
+  margin-left: 20px;
+  background: linear-gradient(124deg, #f00, #ffa500, #ff0, #00FF00, #42AAFF, #0000ff);
+  box-shadow: rgb(0 0 0 / 20%) 0 -1px 7px 1px, inset #f00 0 -1px 9px, rgb(250 250 250 / 70%) 0px 0px 10px 0px;
+}
+
+.red {
+  background: #f00;
+  box-shadow: rgb(0 0 0 / 20%) 0 -1px 7px 1px, inset #f00 0 -1px 9px, rgb(250 250 250 / 100%) 0px 0px 10px 0px;
+}
+
+.yellow {
+  background: #ff0;
+  box-shadow: rgb(0 0 0 / 20%) 0 -1px 7px 1px, inset #ff0 0 -1px 9px, rgb(250 250 250 / 100%) 0px 0px 10px 0px;
+}
+
+.green {
+  background: #00FF00;
+  box-shadow: rgb(0 0 0 / 20%) 0 -1px 7px 1px, inset #00FF00 0 -1px 9px, rgb(250 250 250 / 100%) 0px 0px 10px 0px;
+}
+
+.blue {
+  background: #0000ff;
+  box-shadow: rgb(0 0 0 / 20%) 0 -1px 7px 1px, inset #0000ff 0 -1px 9px, rgb(250 250 250 / 70%) 0px 0px 10px 0px;
+}
+
+
