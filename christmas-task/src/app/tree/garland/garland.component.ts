@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-garland',
   templateUrl: './garland.component.html',
-  styleUrls: ['./garland.component.scss']
+  styleUrls: ['./garland.component.scss'],
 })
-export class GarlandComponent implements OnInit {
+export class GarlandComponent {
+  // constructor() {}
 
-  constructor() { }
+  @Output() eOnGarland = new EventEmitter<Event>();
 
-  ngOnInit(): void {
+  onGarland(event: Event) {
+    this.eOnGarland.emit(event);
   }
-
 }

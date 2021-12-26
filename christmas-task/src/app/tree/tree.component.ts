@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Card } from 'src/app/modules/interfaces/card-interface';
+import { data } from 'src/assets/data';
 
 @Component({
   selector: 'app-tree',
@@ -6,6 +8,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./tree.component.scss'],
 })
 export class TreeComponent {
+  public toys: Card[] = data.slice(0, 20);
+
   isPlay = false;
 
   audio = new Audio('../../assets/tree/audio/audio.mp3');
@@ -15,6 +19,8 @@ export class TreeComponent {
   public tree = '1';
 
   snowToggle = false;
+
+  public lightsToggle = false;
 
   // constructor() { }
 
@@ -36,8 +42,4 @@ export class TreeComponent {
   chooseTree(event: any): void {
     this.tree = event.target.alt;
   }
-
-  // snow() {
-
-  // }
 }

@@ -14,17 +14,22 @@
     <app-background
     (eChangeBg)="changeBg($event)"
     ></app-background>
-    <app-garland></app-garland>
+    <app-garland
+    (eOnGarland)="lightsToggle = !lightsToggle"
+    ></app-garland>
   </section>
   <section class="center-container">
     <app-game-area
     [urlBg]="urlBg"
     [tree]="tree"
     [toggle]="snowToggle"
+    [lightsToggle]="lightsToggle"
     ></app-game-area>
   </section>
   <section class="right-container">
-    <app-choose-toy></app-choose-toy>
+    <app-choose-toy
+    [toy]="toys"
+    ></app-choose-toy>
     <app-decorated></app-decorated>
   </section>
 </div>

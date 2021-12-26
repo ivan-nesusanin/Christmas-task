@@ -5,23 +5,4 @@
   display: flex;
   flex-wrap: wrap;
   gap: 10px 10px;
-
-  div {
-    display: flex;
-    justify-content: end;
-    align-items: flex-end;
-    width: 5vw;
-    height: 5vw;
-    border: solid 1px #92c2c2;
-    border-radius: 10px;
-    cursor: pointer;
-    overflow: hidden;
-
-    span {
-      width: 1.5vw;
-      height: 1.5vw;
-      background-color: #92c2c2;
-      border-radius: 0.5vw;
-    }
-  }
 }

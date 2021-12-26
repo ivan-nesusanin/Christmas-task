@@ -1,0 +1,30 @@
+div {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5vw;
+  height: 5vw;
+  border: solid 1px #92c2c2;
+  border-radius: 10px;
+  cursor: pointer;
+  overflow: hidden;
+
+  img {
+    width: 70%;
+    height: 70%;
+  }
+
+  span {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.5vw;
+    height: 1.5vw;
+    background-color: #92c2c2;
+    border-radius: 0.5vw;
+  }
+}

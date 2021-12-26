@@ -13,4 +13,6 @@ export class GameAreaComponent {
   @Input() tree!: string;
 
   @Input() toggle!: boolean;
+
+  @Input() lightsToggle!: boolean;
 }

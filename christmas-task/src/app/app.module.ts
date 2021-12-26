@@ -16,6 +16,7 @@ import { GarlandComponent } from './tree/garland/garland.component';
 import { ChooseToyComponent } from './tree/choose-toy/choose-toy.component';
 import { DecoratedComponent } from './tree/decorated/decorated.component';
 import { GameAreaComponent } from './tree/game-area/game-area.component';
+import { FavoriteToyComponent } from './tree/choose-toy/favorite-toy/favorite-toy.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { GameAreaComponent } from './tree/game-area/game-area.component';
     ChooseToyComponent,
     DecoratedComponent,
     GameAreaComponent,
+    FavoriteToyComponent,
   ],
   imports: [BrowserModule, FormsModule, AppRoutingModule, ReactiveFormsModule],
   providers: [],
