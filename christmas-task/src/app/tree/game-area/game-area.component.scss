@@ -1,0 +1,42 @@
+.background {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.snowflake-1 {
+  position:absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../../assets/tree/snow/snow1.png");
+  animation: snow1 18s linear infinite;
+}
+
+.snowflake-2 {
+  position:absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../../assets/tree/snow/snow2.png"),url("../../../assets/tree/snow/snow3.png");
+  animation: snowflake-2 10s linear infinite;
+}
+
+@keyframes snowflake-1 {
+  0%{background-position: 0 0, 0 0;}
+  100%{background-position: 10% 600px, 10% 600px;}
+}
+
+@keyframes snowflake-2 {
+  from{background-position: 0 -300px;}
+  20% {background-position: 20% -100px;}
+  40% {background-position: 30% 100px;}
+  to{background-position: 20% 700px;}
+}
+
+.tree {
+  width: 60%;
+}

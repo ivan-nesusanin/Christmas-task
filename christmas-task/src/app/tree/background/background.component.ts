@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-background',
   templateUrl: './background.component.html',
-  styleUrls: ['./background.component.scss']
+  styleUrls: ['./background.component.scss'],
 })
-export class BackgroundComponent implements OnInit {
+export class BackgroundComponent {
+  // constructor() {}
 
-  constructor() { }
+  @Output() eChangeBg = new EventEmitter<Event>();
 
-  ngOnInit(): void {
+  changeBg(event: Event) {
+    this.eChangeBg.emit(event);
   }
-
 }

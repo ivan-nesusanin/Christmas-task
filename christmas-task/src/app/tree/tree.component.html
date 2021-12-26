@@ -1,21 +1,30 @@
 <div class="main-container">
   <section class="left-container">
     <div class="settings">
-      <button>
+      <button (click)="playAudio(audio)">
         <img src="../../assets/tree/svg/music.svg" alt="music" width="30" height="30">
       </button>
-      <button>
+      <button (click)="snowToggle = !snowToggle">
         <img src="../../assets/tree/svg/snowflake.svg" alt="snowflake" width="30" height="30">
       </button>
     </div>
-    <app-choose-tree></app-choose-tree>
-    <app-background></app-background>
+    <app-choose-tree
+    (eChooseTree)="chooseTree($event)"
+    ></app-choose-tree>
+    <app-background
+    (eChangeBg)="changeBg($event)"
+    ></app-background>
     <app-garland></app-garland>
   </section>
   <section class="center-container">
-
+    <app-game-area
+    [urlBg]="urlBg"
+    [tree]="tree"
+    [toggle]="snowToggle"
+    ></app-game-area>
   </section>
   <section class="right-container">
-
+    <app-choose-toy></app-choose-toy>
+    <app-decorated></app-decorated>
   </section>
 </div>

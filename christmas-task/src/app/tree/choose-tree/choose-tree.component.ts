@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-choose-tree',
   templateUrl: './choose-tree.component.html',
-  styleUrls: ['./choose-tree.component.scss']
+  styleUrls: ['./choose-tree.component.scss'],
 })
-export class ChooseTreeComponent implements OnInit {
+export class ChooseTreeComponent {
+  // constructor() { }
 
-  constructor() { }
+  @Output() eChooseTree = new EventEmitter<Event>();
 
-  ngOnInit(): void {
+  chooseTree(event: Event) {
+    this.eChooseTree.emit(event);
   }
-
 }

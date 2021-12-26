@@ -13,6 +13,9 @@ import { CardComponent } from './toys/toy/card/card.component';
 import { ChooseTreeComponent } from './tree/choose-tree/choose-tree.component';
 import { BackgroundComponent } from './tree/background/background.component';
 import { GarlandComponent } from './tree/garland/garland.component';
+import { ChooseToyComponent } from './tree/choose-toy/choose-toy.component';
+import { DecoratedComponent } from './tree/decorated/decorated.component';
+import { GameAreaComponent } from './tree/game-area/game-area.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +29,9 @@ import { GarlandComponent } from './tree/garland/garland.component';
     ChooseTreeComponent,
     BackgroundComponent,
     GarlandComponent,
+    ChooseToyComponent,
+    DecoratedComponent,
+    GameAreaComponent,
   ],
   imports: [BrowserModule, FormsModule, AppRoutingModule, ReactiveFormsModule],
   providers: [],
