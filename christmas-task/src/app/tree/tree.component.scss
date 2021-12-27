@@ -31,3 +31,21 @@
     cursor: pointer;
   }
 }
+
+.reset {
+  width: 70%;
+  height: 40px;
+  margin-left: 30px;
+  font-size: 1em;
+  font-weight: 600;
+  background-color: #92c2c2;
+  text-transform: uppercase;
+  border: solid 1px #fff;
+  border-radius: 20px;
+  cursor: pointer;
+
+  &:hover {
+    width: 82%;;
+    transition: 0.7s;
+  }
+}

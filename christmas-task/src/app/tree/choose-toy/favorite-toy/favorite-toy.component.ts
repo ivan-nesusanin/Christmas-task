@@ -9,5 +9,6 @@ import { Card } from 'src/app/modules/interfaces/card-interface';
 export class FavoriteToyComponent {
   @Input()
   toy!: Card;
+
   // constructor() {}
 }

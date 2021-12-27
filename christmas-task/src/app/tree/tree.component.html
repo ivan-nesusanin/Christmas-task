@@ -4,7 +4,7 @@
       <button (click)="playAudio(audio)">
         <img src="../../assets/tree/svg/music.svg" alt="music" width="30" height="30">
       </button>
-      <button (click)="snowToggle = !snowToggle">
+      <button (click)="snow()">
         <img src="../../assets/tree/svg/snowflake.svg" alt="snowflake" width="30" height="30">
       </button>
     </div>
@@ -15,13 +15,14 @@
     (eChangeBg)="changeBg($event)"
     ></app-background>
     <app-garland
-    (eOnGarland)="lightsToggle = !lightsToggle"
+    (eOnGarland)="lights()"
     ></app-garland>
+    <button class="reset" (click)="resetSettings($event)">Сброс настроек</button>
   </section>
   <section class="center-container">
     <app-game-area
-    [urlBg]="urlBg"
-    [tree]="tree"
+    [urlBg]="urlBg!"
+    [tree]="tree!"
     [toggle]="snowToggle"
     [lightsToggle]="lightsToggle"
     ></app-game-area>
