@@ -67,6 +67,7 @@ export class TreeComponent implements OnInit {
   resetSettings(event: Event): void {
     if (event) {
       localStorage.clear();
+      location.reload();
     }
   }
 }

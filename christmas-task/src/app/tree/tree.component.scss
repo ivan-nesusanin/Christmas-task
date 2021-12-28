@@ -13,6 +13,7 @@
 }
 
 .center-container {
+  position: relative;
   width: 46%;
   border: solid 1px #92c2c2;
 }
@@ -47,5 +48,23 @@
   &:hover {
     width: 82%;;
     transition: 0.7s;
+  }
+}
+
+.text {
+  position: absolute;
+  top: 50%;
+  left: calc(50% - 15vw);
+  width: 30vw;
+  // bottom: 0;
+  // right: 0;
+  // margin: 0;
+  z-index: -1;
+
+  p {
+    font-size: 1.5em;
+    text-transform: uppercase;
+    color:white;
+    text-align: center;
   }
 }
